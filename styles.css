@@ -141,7 +141,7 @@ footer > a:last-child {
     margin: auto;
 }
 
-/* Hero section */
+
 
 .hero {
     min-height: 690px;
@@ -343,7 +343,7 @@ h2 em {
     background: var(--accent);
 }
 
-/* General sections */
+
 
 .section {
     padding: 100px 0;
@@ -377,7 +377,7 @@ h2 em {
     margin: 14px 0 0;
 }
 
-/* About section */
+
 
 .about-grid {
     display: grid;
@@ -437,7 +437,7 @@ h2 em {
     margin: 4px 0;
 }
 
-/* Timeline and projects */
+
 
 .timeline {
     border-top: 1px solid var(--line);
@@ -549,7 +549,7 @@ h2 em {
     font-weight: 700;
 }
 
-/* Project filters */
+
 
 .filters {
     display: flex;
@@ -693,7 +693,7 @@ h2 em {
     font-size: 10px;
 }
 
-/* Skills section */
+
 
 .skills-grid {
     display: grid;
@@ -728,7 +728,7 @@ h2 em {
     color: var(--muted);
 }
 
-/* Experience section */
+
 
 .experience {
     border-top: 1px solid var(--line);
@@ -765,7 +765,7 @@ h2 em {
     text-align: right;
 }
 
-/* Program section */
+
 
 .program {
     background: var(--panel);
@@ -801,7 +801,7 @@ h2 em {
     margin-top: 4px;
 }
 
-/* Certificates section */
+
 
 .cert-grid {
     display: grid;
@@ -855,7 +855,7 @@ h2 em {
     font-size: 10px;
 }
 
-/* Contact section */
+
 
 .contact {
     padding: 85px 0;
@@ -893,7 +893,7 @@ h2 em {
     color: var(--accent);
 }
 
-/* Footer */
+
 
 footer {
     border-top: 1px solid var(--line);
@@ -908,7 +908,7 @@ footer > span {
     color: var(--muted);
 }
 
-/* Certificate modal */
+
 
 .modal {
     display: none;
@@ -965,7 +965,7 @@ footer > span {
     cursor: pointer;
 }
 
-/* Notifications and navigation */
+
 
 .toast {
     position: fixed;
@@ -1006,7 +1006,7 @@ footer > span {
     display: block;
 }
 
-/* Responsive design */
+
 
 @media (max-width: 850px) {
     .header {
@@ -1228,7 +1228,7 @@ footer > span {
     }
 }
 
-/* Reduced motion */
+
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -1242,7 +1242,7 @@ footer > span {
     }
 }
 
-/* Interaction effects */
+
 
 .reveal-ready .section-head,
 .reveal-ready .about-grid,
@@ -1278,14 +1278,133 @@ footer > span {
 }
 
 
+.technical-profile {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 18px;
+    align-items: stretch;
+    margin-bottom: 25px;
+}
+
+
 
 .technical-intro {
-    max-width: 850px;
+    max-width: none;
     padding: 28px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 8px;
+}
+
+.technical-intro h3 {
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.technical-intro p {
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 750px;
+}
+
+
+
+.technical-photo {
+    position: relative;
+    min-height: 100%;
+    padding: 25px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 25% 45%,
+            rgba(35, 115, 160, .20),
+            transparent 65%
+        ),
+        #080f1d;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
+.technical-photo:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.technical-photo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.technical-photo-image {
+    height: 310px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.technical-photo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+
+    filter:
+        grayscale(100%)
+        sepia(100%)
+        hue-rotate(175deg)
+        saturate(2.5)
+        brightness(.85)
+        contrast(1.12)
+        drop-shadow(0 5px 20px rgba(25, 115, 190, .35));
+
+    transition: transform .4s;
+}
+
+.technical-photo:hover .technical-photo-image img {
+    transform: scale(1.05);
+}
+
+.technical-photo-text {
+    position: relative;
+    z-index: 2;
+}
+
+.technical-photo-text span {
+    font: 9px 'DM Mono', monospace;
+    color: var(--accent);
+    letter-spacing: .14em;
+}
+
+.technical-photo-text h3 {
+    color: #f3f5f8;
+    font-size: clamp(17px, 2vw, 25px);
+    line-height: 1.35;
+    letter-spacing: -.04em;
+    margin: 14px 0;
+}
+
+.technical-photo-text p {
+    color: #a8b4c6;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.photo-index {
+    position: absolute;
+    bottom: 13px;
+    right: 17px;
+    color: #80d6ce;
+    font: 8px 'DM Mono', monospace;
+    letter-spacing: .12em;
+    opacity: .8;
 }
 
 .technical-intro h3 {
@@ -1419,6 +1538,17 @@ footer > span {
     .technical-intro {
         padding: 20px;
     }
+.technical-profile {
+    grid-template-columns: 1fr;
+}
+
+.technical-photo {
+    min-height: 320px;
+}
+
+.technical-photo-image {
+    height: 280px;
+}
 
     .technical-card {
         padding: 20px;
@@ -1428,4 +1558,74 @@ footer > span {
         max-width: 100%;
     }
 
+}
+
+
+.personal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.personal-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px;
+    transition: .25s;
+}
+
+.personal-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.personal-card small,
+.personal-quote span {
+    font: 9px 'DM Mono', monospace;
+    color: var(--accent);
+    letter-spacing: .13em;
+}
+
+.personal-card h3 {
+    font-size: 22px;
+    margin: 15px 0 10px;
+}
+
+.personal-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.personal-quote {
+    margin-top: 20px;
+    padding: 35px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+}
+
+.personal-quote h3 {
+    max-width: 750px;
+    font-size: clamp(22px, 3vw, 35px);
+    line-height: 1.4;
+    letter-spacing: -.04em;
+    margin: 15px 0 0;
+    color: var(--text);
+}
+
+@media (max-width: 620px) {
+    .personal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .personal-card {
+        padding: 22px;
+    }
+
+    .personal-quote {
+        padding: 24px;
+    }
 }

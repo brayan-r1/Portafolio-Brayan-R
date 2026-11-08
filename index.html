@@ -38,6 +38,7 @@
 
         <nav id="nav">
             <a href="#about">Profile</a>
+            <a href="#technical">Tech Stack</a>
             <a href="#journey">Journey</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
@@ -177,7 +178,89 @@
             </div>
 
         </section>
+<section class="section wrap" id="technical">
 
+    <div class="section-head">
+        <span>02 / ABOUT ME & TECHNOLOGY</span>
+        <h2>
+            My profile &<br>
+            <em>technical skills.</em>
+        </h2>
+    </div>
+
+    <div class="technical-intro">
+        <span class="tag">ABOUT ME</span>
+        <h3>Brayan Rivas</h3>
+        <p>
+            I am a student preparing for a degree in International Business and Trade
+            at Universidad Francisco Gavidia. Throughout my three years in the
+            ¡Supérate! program, I have developed skills in technology, business,
+            digital design and communication.
+        </p>
+        <p>
+            I consider myself responsible, creative, adaptable and proactive.
+            My main strengths include teamwork, leadership, problem-solving,
+            communication, organization and continuous learning.
+        </p>
+    </div>
+
+    <div class="technical-grid">
+
+        <article class="technical-card">
+            <small>A / FRONTEND</small>
+            <h3>Frontend Development</h3>
+            <div class="skill-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+                <span>UI / UX</span>
+            </div>
+        </article>
+
+        <article class="technical-card">
+            <small>B / BACKEND</small>
+            <h3>Backend Development</h3>
+            <div class="skill-tags">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>Server Logic</span>
+                <span>Web Applications</span>
+            </div>
+        </article>
+
+        <article class="technical-card">
+            <small>C / DATABASES</small>
+            <h3>Databases</h3>
+            <div class="skill-tags">
+                <span>SQL</span>
+                <span>Database Fundamentals</span>
+                <span>Data Management</span>
+            </div>
+        </article>
+
+        <article class="technical-card">
+            <small>D / PROFESSIONAL TOOLS</small>
+            <h3>Tools & Platforms</h3>
+            <div class="skill-tags">
+                <span>Figma</span>
+                <span>Canva</span>
+                <span>Trello</span>
+                <span>Jira</span>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Microsoft Office 365</span>
+                <span>Excel</span>
+                <span>Google Workspace</span>
+                <span>ChatGPT</span>
+                <span>Gemini</span>
+            </div>
+        </article>
+
+    </div>
+
+
+</section>
         <section class="section wrap" id="journey">
 
             <div class="section-head">
@@ -349,8 +432,7 @@
                         <h3>Recycle</h3>
 
                         <p>
-                            Collaborative proposal focused on recycling and responsible waste management.
-                        </p>
+                            A collaborative recycling platform that promotes responsible waste management by allowing users to scan recyclable products, earn points, and contribute to a more sustainable environment.
 
                         <div class="pills">
                             <i>Research</i>
@@ -378,8 +460,7 @@
                         <h3>TeachMeNow</h3>
 
                         <p>
-                            An AI-supported educational concept built around a clear and approachable learning experience.
-                        </p>
+                            An AI-powered educational platform designed to simplify learning and help teachers plan, organize, and develop their classes through an intuitive and accessible experience.                        </p>
 
                         <div class="pills">
                             <i>Figma</i>
@@ -407,7 +488,7 @@
                         <h3>ValTrust</h3>
 
                         <p>
-                            A digital proposal for residential property evaluation and valuation.
+                            An innovative digital platform that simplifies residential property evaluation and valuation through intelligent technology and accessible tools.
                         </p>
 
                         <div class="pills">
@@ -623,7 +704,47 @@
                         <i>7 hours · View diploma ↗</i>
                     </span>
                 </button>
+                <button
+    class="cert cert-extra"
+    data-title="Excel Associate"
+    data-image="assets/certificates/excel-associate.png"
+    data-pdf="assets/certificates/excel-associate.pdf"
+>
+        <img src="assets/certificates/Excel Associate_page-0001.jpg" alt="">
 
+    <span>
+        <small>MICROSOFT · EXCEL</small>
+        <b>Excel Associate</b>
+        <i>Microsoft Office Specialist · View diploma ↗</i>
+    </span>
+    
+                </button>
+
+<button
+    class="cert cert-extra"
+    data-image="assets/certificates/Excel Expert_page-0001.jpg"
+    data-pdf="assets/certificates/Excel Expert.pdf"
+>
+                <img src="assets/certificates/Excel Expert_page-0001.jpg" alt="">
+    <span>
+        <small>MICROSOFT · EXCEL</small>
+        <b>Excel Expert</b>
+        <i>Microsoft Office Specialist · View diploma ↗</i>
+    </span>
+</button>
+
+<button
+    class="cert cert-extra"
+    data-image="assets/certificates/prompt engineering_page-0001.jpg"
+    data-pdf="assets/certificates/prompt engineering.pdf"
+>
+        <img src="assets/certificates/prompt engineering_page-0001.jpg" alt="">
+    <span>
+        <small>ARTIFICIAL INTELLIGENCE</small>
+        <b>Prompt Engineering</b>
+        <i>Professional certification · View diploma ↗</i>
+    </span>
+</button>
             </div>
 
         </section>
@@ -650,7 +771,44 @@
                     <button class="btn secondary" id="copy">
                         Copy email ⧉
                     </button>
+                
                 </div>
+                <form class="contact-form" id="contactForm">
+
+    <h3>Send me a message</h3>
+
+    <label for="visitorName">Your name</label>
+    <input
+        type="text"
+        id="visitorName"
+        name="name"
+        placeholder="Enter your name"
+        required
+    >
+
+    <label for="visitorEmail">Your email</label>
+    <input
+        type="email"
+        id="visitorEmail"
+        name="email"
+        placeholder="Enter your email"
+        required
+    >
+
+    <label for="visitorMessage">Your message</label>
+    <textarea
+        id="visitorMessage"
+        name="message"
+        rows="5"
+        placeholder="Write your message..."
+        required
+    ></textarea>
+
+    <button type="submit" class="btn primary">
+        Send message ↗
+    </button>
+
+</form>
             </div>
 
             <div class="contact-details">

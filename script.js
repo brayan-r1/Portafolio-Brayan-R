@@ -200,3 +200,37 @@ if ('IntersectionObserver' in window) {
     });
 
 }
+
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+
+    contactForm.addEventListener('submit', event => {
+
+        event.preventDefault();
+
+        const name = document.getElementById('visitorName').value.trim();
+        const email = document.getElementById('visitorEmail').value.trim();
+        const message = document.getElementById('visitorMessage').value.trim();
+
+        if (!name || !email || !message) {
+            return;
+        }
+
+        const subject = encodeURIComponent(
+            'Portfolio contact from ' + name
+        );
+
+        const body = encodeURIComponent(
+            'Name: ' + name +
+            '\nEmail: ' + email +
+            '\n\nMessage:\n' + message
+        );
+
+        window.location.href =
+            'mailto:brayan.rivxs@gmail.com?subject=' +
+            subject + '&body=' + body;
+
+    });
+
+}

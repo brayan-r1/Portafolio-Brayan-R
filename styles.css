@@ -1276,3 +1276,156 @@ footer > span {
         animation-duration: .01ms !important;
     }
 }
+
+
+
+.technical-intro {
+    max-width: 850px;
+    padding: 28px;
+    margin-bottom: 25px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.technical-intro h3 {
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.technical-intro p {
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 750px;
+}
+
+.technical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.technical-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 25px;
+    border-radius: 8px;
+    transition: .25s;
+}
+
+.technical-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.technical-card > small {
+    font: 9px 'DM Mono', monospace;
+    color: var(--accent);
+    letter-spacing: .12em;
+}
+
+.technical-card h3 {
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.technical-card .skill-tags {
+    margin-bottom: 0;
+}
+
+
+
+.cert-extra {
+    display: block;
+    text-decoration: none;
+    min-height: 145px;
+}
+
+.cert-extra > span {
+    min-height: 145px;
+    align-content: center;
+}
+
+.cert-extra:last-child {
+    grid-column: auto;
+}
+
+
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+    margin-top: 35px;
+    max-width: 480px;
+}
+
+.contact-form h3 {
+    font-size: 19px;
+    margin: 0 0 5px;
+}
+
+.contact-form label {
+    font: 10px 'DM Mono', monospace;
+    color: var(--accent);
+    letter-spacing: .08em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--panel);
+    color: var(--text);
+    font: 12px Manrope, sans-serif;
+    outline: none;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--muted);
+}
+
+.contact-form button {
+    justify-self: start;
+    margin-top: 5px;
+}
+
+@media (max-width: 850px) {
+
+    .technical-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cert-extra:last-child {
+        grid-column: auto;
+    }
+
+}
+
+@media (max-width: 620px) {
+
+    .technical-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .technical-intro {
+        padding: 20px;
+    }
+
+    .technical-card {
+        padding: 20px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+}

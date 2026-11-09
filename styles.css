@@ -1310,24 +1310,28 @@ footer > span {
 
 
 
+
 .technical-photo {
     position: relative;
     min-height: 100%;
     padding: 25px;
     overflow: hidden;
+
     background:
         radial-gradient(
             ellipse at 25% 45%,
-            rgba(35, 115, 160, .20),
+            color-mix(in srgb, var(--accent) 15%, transparent),
             transparent 65%
         ),
-        #080f1d;
+        var(--panel);
+
     border: 1px solid var(--line);
     border-radius: 8px;
     display: flex;
     align-items: center;
     transition: .3s;
 }
+
 
 .technical-photo:hover {
     border-color: var(--accent);
@@ -1384,7 +1388,7 @@ footer > span {
 }
 
 .technical-photo-text h3 {
-    color: #f3f5f8;
+    color: var(--text);
     font-size: clamp(17px, 2vw, 25px);
     line-height: 1.35;
     letter-spacing: -.04em;
@@ -1392,7 +1396,7 @@ footer > span {
 }
 
 .technical-photo-text p {
-    color: #a8b4c6;
+    color: var(--muted);
     font-size: 11px;
     line-height: 1.8;
 }
@@ -1401,7 +1405,7 @@ footer > span {
     position: absolute;
     bottom: 13px;
     right: 17px;
-    color: #80d6ce;
+    color: var(--accent);
     font: 8px 'DM Mono', monospace;
     letter-spacing: .12em;
     opacity: .8;
